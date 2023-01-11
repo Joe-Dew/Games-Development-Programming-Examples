@@ -2,6 +2,7 @@ import pygame
 import random
 import battleV2
 import menu
+import tile
 
 pygame.init()
 
@@ -23,6 +24,10 @@ while running:
 
     if not tile_proceed and advance:
         tile_proceed, advance = menu.intermediate(surface)
+
+    if tile_proceed and advance:
+        tile.Tile.setupLayer()
+        tile.Tile.load("Roanoke Town.json")
         
     pygame.display.update()
     

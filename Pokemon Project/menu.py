@@ -101,6 +101,9 @@ def intermediate(surface):
 					if element == inter.elements[1]:
 						time.sleep(0.3)
 						advance = False
+					if element == inter.elements[0]:
+						time.sleep(0.3)
+						tile_proceed = True
 		if event.type == pygame.MOUSEBUTTONUP:
 			for element in inter.elements:
 				element.col = (255, 0, 0)
